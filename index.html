@@ -2,19 +2,153 @@
 <head>
   <title>Chatresh</title>
   <style>
+    :root{
+      --blue: #0b57d0;
+      --gradblue: linear-gradient(to bottom right, #0062ff, var(--blue));
+      --lightblue: rgba(0, 145, 255, 0.25);
+      --darkblue: #01ff49;
+    }
+    *, body{
+      box-sizing: border-box;
+    }
+
     body{
-    background-image:linear-gradient(to bottom right, blue, pink);
-      color:white;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     }
-    h1{
-    color:white;
-    font-weight:bold;
-      font-size:40;
+    
+    div.header{
+      color: white;
+      background-image: var(--gradblue);
+      padding: 10px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+      display: flex;
     }
+
+    div.body{
+      height: 100%;
+      display: flex;
+    }
+
+    div.tabs{
+      display: flex ;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 80%;
+      margin-top: 10%;
+      width: 100px;
+      padding: 10px;
+    }
+
+    button{
+      background-color: var(--blue);
+      border: 1px solid var(--blue);
+      border-radius: 15px;
+      padding: 10px;
+      color: white;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    }
+
+    button:hover{
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+      background-color: white;
+      color: var(--blue);
+    }
+
+    div.panel{
+      flex-grow: 5;
+      width: 100%;
+      height: 80%;
+      margin-top: 10%;
+      padding: 20px;
+      overflow: auto;
+      display: block;
+    }
+
+    div.panel div{
+      height: 100%;
+      width: 100%;
+    }
+
+    div.panel div p{
+      color: var(--blue);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      font-size: larger;
+      background-color: var(--lightblue);
+      padding: 10px;
+      border: 1px solid var(--blue);
+      border-radius: 15px;
+      width: fit-content;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    }
+
+    div.panel div p:hover{
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+    }
+
+    div.panel div div{
+      color: white;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding: 10px;
+      border: 1px solid var(--blue);
+      height: fit-content;
+      border-radius: 15px;
+      background-color: var(--blue);
+    }
+
+    div.indicator{
+      background-color: var(--lightblue);
+      display: block;
+      width: 80%;
+      height:  50px;
+      border: none;
+      border-radius: 15px;
+      margin: 10%;
+    }
+
   </style>
   
 </head>
 <body>
-  <h1>My Webpage</h1>
+  <div class = "header">
+    <img src = ''/>
+    <h1>Chatresh Ramasai Gudi</h1>
+  </div>
+
+  <div class = "body">
+    <div class="tabs">
+      <div class = 'indicator'></div>
+      <span><img src = ''></span>
+      <span><img src = ''></span>
+      <span><img src = ''></span>
+      <span><img src = ''></span>
+    </div>
+    <div class="panel">
+      <div class="About">
+        <p>About Me</p>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est velit egestas dui id ornare arcu odio ut. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Malesuada fames ac turpis egestas integer. Ullamcorper eget nulla facilisi etiam dignissim. A erat nam at lectus urna. Sed velit dignissim sodales ut eu sem. Enim facilisis gravida neque convallis a. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt. Aliquam vestibulum morbi blandit cursus risus at ultrices mi.</div>
+      </div>
+      <div class="Education">
+        <p>Education</p>
+        <div></div>
+      </div>
+      <div class="Projects">
+        <p>Projects</p>
+        <div></div>
+      </div>
+      <div class="Contact">
+        <p>Contact</p>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
